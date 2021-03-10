@@ -13,7 +13,7 @@ import time
 import pandas as pd
 import datetime
 
-auth('17621171968', '171968')  # 账号是申请时所填写的手机号；密码为聚宽官网登录密码，新申请用户默认为手机号后6位
+auth('username', 'password')  # 账号是申请时所填写的手机号；密码为聚宽官网登录密码，新申请用户默认为手机号后6位
 
 # 设置行列不忽略
 pd.set_option('display.max_rows', 100000)
