@@ -13,8 +13,7 @@ import time
 import pandas as pd
 import datetime
 
-auth('username', 'password')  # 账号是申请时所填写的手机号；密码为聚宽官网登录密码，新申请用户默认为手机号后6位
-
+auth('17621171968', '171968')  # 账号是申请时所填写的手机号
 # 设置行列不忽略
 pd.set_option('display.max_rows', 100000)
 pd.set_option('display.max_columns', 1000)
@@ -120,3 +119,8 @@ def calculate_change_pct(data):
     data['close_pct'] = (data['close'] - data['close'].shift(1)) \
                         / data['close'].shift(1)
     return data
+
+
+if __name__ == '__main__':
+    data = get_fundamentals(query(indicator), statDate='2020')  # 获取财务指标数据
+    print(data)
