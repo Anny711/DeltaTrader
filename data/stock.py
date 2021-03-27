@@ -164,5 +164,9 @@ def update_daily_price(stock_code, type):
 
 
 if __name__ == '__main__':
-    data = get_fundamentals(query(indicator), statDate='2020')  # 获取财务指标数据
-    print(data)
+    # data = get_fundamentals(query(indicator), statDate='2020')  # 获取财务指标数据
+    # print(data)
+
+    df = get_fundamentals(query(valuation), date=str(datetime.date.today()))
+    print(df)
+
