@@ -36,6 +36,7 @@ def ma_strategy(data, short_window=5, long_window=20):
 
     # 计算单次收益
     data = strat.calculate_prof_pct(data)
+    # print(data.describe())
 
     # 计算累计收益
     data = strat.calculate_cum_prof(data)
